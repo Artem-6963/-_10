@@ -1,0 +1,1327 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffe5f0">
+<title>С днём рождения, моя любовь! 💗</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Marck+Script&display=swap');
+
+:root {
+  --pink: #ff70ad;
+  --pink-dark: #df438b;
+  --pink-light: #fff0f6;
+  --text: #81405e;
+  --white: #fffafd;
+  --shadow: 0 12px 35px rgba(200, 62, 125, .13);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  font-family: 'Comfortaa', sans-serif;
+  background: linear-gradient(135deg, #fff7fb, #ffe7f1, #fff1f7);
+  overflow-x: hidden;
+}
+
+a, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: #ffb9d6;
+  color: #8f2859;
+}
+
+/* НАВИГАЦИЯ */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  min-height: 65px;
+  padding: 15px clamp(16px, 5vw, 65px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  background: rgba(255, 249, 252, .88);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid #ffd5e6;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--pink-dark);
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: clamp(10px, 2vw, 25px);
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 12px;
+  transition: color .25s;
+}
+
+.nav-links a:hover {
+  color: var(--pink-dark);
+}
+
+/* ГЛАВНЫЙ ЭКРАН */
+
+.hero {
+  min-height: 90svh;
+  padding: 75px 20px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 50% 35%, #fff 0%, #ffe4f0 48%, #ffd2e5 100%);
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+  background: #fff8fb;
+  filter: blur(70px);
+  opacity: .75;
+  z-index: -1;
+}
+
+.hero::before {
+  top: -150px;
+  left: -130px;
+}
+
+.hero::after {
+  bottom: -160px;
+  right: -100px;
+  background: #ff94bf;
+}
+
+.hero-content {
+  max-width: 850px;
+  animation: enterHero 1.1s both;
+}
+
+.age {
+  display: grid;
+  place-items: center;
+  width: 118px;
+  height: 118px;
+  margin: auto;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #ffb8d5, #f04496);
+  color: white;
+  font-size: 49px;
+  font-weight: 700;
+  box-shadow: 0 12px 35px #e94b9655, inset 0 3px 8px #ffffff88;
+  animation: float 3s ease-in-out infinite;
+}
+
+.eyebrow {
+  margin-top: 27px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #d84b90;
+}
+
+h1 {
+  margin: 20px 0;
+  color: #e94b96;
+  font-family: 'Marck Script', cursive;
+  font-size: clamp(49px, 9vw, 100px);
+  line-height: 1.05;
+  font-weight: 400;
+  text-shadow: 0 5px 0 #fff, 0 12px 30px #f58cbb44;
+}
+
+.hero-description {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: clamp(13px, 2vw, 16px);
+  line-height: 2;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 15px 25px;
+  margin-top: 25px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(120deg, #ff8cba, #e74491);
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 9px 25px #e7449138;
+  transition: transform .25s, box-shadow .25s;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px #e7449155;
+}
+
+.btn:active {
+  transform: scale(.97);
+}
+
+.floating {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  animation: float 4s ease-in-out infinite;
+}
+
+.f1 {
+  top: 14%;
+  left: 10%;
+  font-size: 45px;
+}
+
+.f2 {
+  top: 20%;
+  right: 12%;
+  font-size: 37px;
+  animation-delay: -1s;
+}
+
+.f3 {
+  bottom: 16%;
+  left: 17%;
+  font-size: 34px;
+  animation-delay: -2s;
+}
+
+.f4 {
+  bottom: 19%;
+  right: 17%;
+  font-size: 44px;
+  animation-delay: -.6s;
+}
+
+/* ОБЩИЕ СЕКЦИИ */
+
+.section {
+  width: min(1200px, 100%);
+  margin: auto;
+  padding: 80px clamp(18px, 5vw, 60px);
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.section-heading h2,
+.final h2 {
+  font: 400 clamp(38px, 6vw, 62px)/1.15 'Marck Script', cursive;
+  color: var(--pink-dark);
+  margin: 0 0 13px;
+}
+
+.section-heading p {
+  margin: 0 auto;
+  max-width: 650px;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* КАРТОЧКИ ПОЖЕЛАНИЙ */
+
+.wishes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.wish-card {
+  padding: 28px 24px;
+  border: 1px solid #ffd1e4;
+  border-radius: 24px;
+  background: rgba(255, 251, 253, .94);
+  box-shadow: var(--shadow);
+  transition: box-shadow .3s, border-color .3s;
+}
+
+.wish-card:hover {
+  box-shadow: 0 18px 38px #d94a8c20;
+  border-color: #ffa8ce;
+}
+
+.wish-icon {
+  font-size: 36px;
+}
+
+.wish-card h3 {
+  color: var(--pink-dark);
+  font-size: 16px;
+  margin: 17px 0 11px;
+}
+
+.wish-card p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 2;
+}
+
+/* АНИМАЦИЯ ПОЯВЛЕНИЯ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity .75s ease,
+    transform .75s cubic-bezier(.2, .8, .2, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ПЕРВАЯ ГАЛЕРЕЯ: POLAROID */
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(12px, 2.3vw, 27px);
+}
+
+.polaroid {
+  position: relative;
+  padding: 10px 10px 20px;
+  border-radius: 7px;
+  border: 1px solid #ffe1ed;
+  background: white;
+  box-shadow: 0 12px 30px #c13f7922;
+  transform: rotate(var(--tilt, 0deg));
+  transition: transform .35s, box-shadow .35s;
+}
+
+.polaroid:hover {
+  transform: rotate(0deg) translateY(-8px) scale(1.025);
+  box-shadow: 0 22px 40px #d94a8c30;
+  z-index: 3;
+}
+
+.polaroid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4px;
+  background: linear-gradient(145deg, #ffe0ed, #ffc0da);
+}
+
+.photo-heart {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: #ed579b;
+  font-size: 25px;
+  filter: drop-shadow(0 3px 5px #ed499933);
+}
+
+.photo-caption {
+  padding-top: 12px;
+  text-align: center;
+  color: #df498e;
+  font: 23px 'Marck Script', cursive;
+}
+
+/* ВТОРАЯ ГАЛЕРЕЯ: КОЛЛАЖ */
+
+.collage-wrap {
+  padding: 23px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ffd5e7, #fff5fa, #ffc5dd);
+  box-shadow: inset 0 0 25px #ffffff88, var(--shadow);
+}
+
+.photo-collage {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-template-rows: repeat(2, minmax(160px, 230px));
+  gap: 13px;
+}
+
+.collage-item {
+  min-width: 0;
+  min-height: 0;
+  position: relative;
+  overflow: hidden;
+  border: 5px solid white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px #9d346020;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.collage-item:first-child {
+  grid-row: span 2;
+}
+
+.collage-item:hover {
+  transform: scale(1.025);
+  box-shadow: 0 14px 30px #9d346044;
+  z-index: 2;
+}
+
+.collage-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s;
+}
+
+.collage-item:hover img {
+  transform: scale(1.07);
+}
+
+.collage-item::after {
+  content: "♡";
+  position: absolute;
+  right: 10px;
+  bottom: 4px;
+  color: white;
+  font-size: 32px;
+  text-shadow: 0 2px 10px #b92f70;
+  pointer-events: none;
+}
+
+/* ПОДПИСЬ ПОД ФОТО */
+
+.gallery-caption {
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.9;
+  margin: 25px auto 0;
+  max-width: 550px;
+}
+
+/* ПИСЬМО */
+
+.letter-envelope {
+  max-width: 850px;
+  margin: auto;
+  padding: 14px;
+  border-radius: 28px;
+  background: linear-gradient(145deg, #ffb6d5, #ff8cbd);
+  box-shadow: 0 20px 50px #d94a8c20;
+}
+
+.letter {
+  padding: clamp(25px, 5vw, 55px);
+  border-radius: 20px;
+  background: #fffafd;
+  line-height: 2;
+}
+
+.letter h3 {
+  margin: 0 0 20px;
+  color: var(--pink-dark);
+  font: 38px 'Marck Script', cursive;
+}
+
+.letter p {
+  font-size: 13px;
+  line-height: 2.1;
+}
+
+.signature {
+  margin-top: 25px;
+  text-align: right;
+  color: var(--pink-dark);
+  font: 30px 'Marck Script', cursive;
+}
+
+/* ФИНАЛ */
+
+.final {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  max-width: none;
+  padding: 95px 20px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(145deg, #ffb6d5, #f16da9 60%, #d9478d);
+}
+
+.final::before,
+.final::after {
+  content: "♡";
+  position: absolute;
+  z-index: -1;
+  color: #ffffff35;
+  font-size: 200px;
+  animation: float 5s infinite ease-in-out;
+}
+
+.final::before {
+  left: 3%;
+  top: 0;
+}
+
+.final::after {
+  right: 3%;
+  bottom: -35px;
+  animation-delay: -2s;
+}
+
+.final h2 {
+  color: white;
+}
+
+.final p {
+  max-width: 650px;
+  margin: 20px auto;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.final .btn {
+  background: white;
+  color: var(--pink-dark);
+}
+
+/* КНОПКА НАВЕРХ */
+
+.to-top {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 30;
+  display: grid;
+  place-items: center;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #ffc3dc;
+  border-radius: 50%;
+  background: #fffafd;
+  color: #e94b96;
+  font-size: 23px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: .3s;
+}
+
+.to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* СЕРДЕЧКИ И ЭФФЕКТЫ */
+
+.heart-particle {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  pointer-events: none;
+  user-select: none;
+  animation: heartFly 1.8s ease-out forwards;
+}
+
+@keyframes enterHero {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(-5deg); }
+  50% { transform: translateY(-13px) rotate(5deg); }
+}
+
+@keyframes heartFly {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(.5) rotate(0);
+  }
+  15% { opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: translate(var(--drift), -170px) scale(1.5) rotate(30deg);
+  }
+}
+
+/* ПЛАНШЕТЫ */
+
+@media (max-width: 900px) {
+  .wishes-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 20px;
+  }
+
+  .photo-collage {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 190px);
+  }
+
+  .collage-item:first-child {
+    grid-row: span 2;
+  }
+
+  .collage-wrap {
+    padding: 15px;
+  }
+}
+
+/* ТЕЛЕФОНЫ */
+
+@media (max-width: 560px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 13px;
+    padding: 15px 18px;
+  }
+
+  .nav-links {
+    width: 100%;
+    gap: 14px;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+  }
+
+  .hero {
+    min-height: 83svh;
+    padding: 65px 20px;
+  }
+
+  .age {
+    width: 90px;
+    height: 90px;
+    font-size: 38px;
+  }
+
+  .eyebrow {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  h1 {
+    font-size: clamp(45px, 12vw, 65px);
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .f1 {
+    left: 4%;
+    top: 10%;
+    font-size: 29px;
+  }
+
+  .f2 {
+    right: 5%;
+    top: 15%;
+    font-size: 27px;
+  }
+
+  .f3 {
+    left: 7%;
+    bottom: 9%;
+    font-size: 27px;
+  }
+
+  .f4 {
+    right: 7%;
+    bottom: 10%;
+    font-size: 30px;
+  }
+
+  .section {
+    padding: 55px 18px;
+  }
+
+  .section-heading {
+    margin-bottom: 28px;
+  }
+
+  .section-heading h2,
+  .final h2 {
+    font-size: 42px;
+  }
+
+  .section-heading p {
+    font-size: 11px;
+  }
+
+  .wishes-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .wish-card {
+    padding: 23px;
+    border-radius: 20px;
+  }
+
+  .wish-card p {
+    font-size: 12px;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 12px;
+  }
+
+  .polaroid {
+    padding: 7px 7px 13px;
+    border-radius: 5px;
+  }
+
+  .polaroid img {
+    aspect-ratio: 3 / 4;
+  }
+
+  .photo-caption {
+    font-size: clamp(16px, 4.5vw, 22px);
+    padding-top: 9px;
+  }
+
+  .photo-heart {
+    top: -12px;
+    font-size: 20px;
+  }
+
+  .collage-wrap {
+    padding: 9px;
+    border-radius: 19px;
+  }
+
+  .photo-collage {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, clamp(110px, 35vw, 165px));
+    gap: 7px;
+  }
+
+  .collage-item {
+    border-width: 3px;
+    border-radius: 8px;
+  }
+
+  .collage-item::after {
+    right: 5px;
+    bottom: 0;
+    font-size: 23px;
+  }
+
+  .letter-envelope {
+    padding: 8px;
+    border-radius: 20px;
+  }
+
+  .letter {
+    padding: 22px 18px;
+    border-radius: 15px;
+  }
+
+  .letter h3 {
+    font-size: 32px;
+  }
+
+  .letter p {
+    font-size: 12px;
+    line-height: 2;
+  }
+
+  .signature {
+    font-size: 25px;
+  }
+
+  .final {
+    padding: 75px 20px;
+  }
+
+  .final p {
+    font-size: 12px;
+  }
+
+  .to-top {
+    width: 40px;
+    height: 40px;
+    right: 12px;
+    bottom: 12px;
+  }
+}
+
+/* МАЛЕНЬКИЕ ТЕЛЕФОНЫ */
+
+@media (max-width: 360px) {
+  .nav-links {
+    gap: 9px;
+  }
+
+  .nav-links a {
+    font-size: 10px;
+  }
+
+  .photo-grid {
+    gap: 19px 9px;
+  }
+
+  .photo-caption {
+    font-size: 15px;
+  }
+
+  .photo-collage {
+    grid-template-rows: repeat(3, 110px);
+  }
+}
+
+/* УВАЖЕНИЕ К НАСТРОЙКЕ СНИЖЕНИЯ АНИМАЦИЙ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- НАВИГАЦИЯ -->
+<nav class="navbar">
+  <div class="logo">♡ Только для тебя</div>
+
+  <div class="nav-links">
+    <a href="#home">Главная</a>
+    <a href="#wishes">Пожелания</a>
+    <a href="#photos">Фото</a>
+    <a href="#collage">Коллаж</a>
+    <a href="#letter">Письмо</a>
+  </div>
+</nav>
+
+<!-- ПЕРВЫЙ ЭКРАН -->
+<header class="hero" id="home">
+
+  <span class="floating f1">♡</span>
+  <span class="floating f2">✨</span>
+  <span class="floating f3">🌸</span>
+  <span class="floating f4">💗</span>
+
+  <div class="hero-content">
+
+    <div class="age">16</div>
+
+    <div class="eyebrow">Сегодня твой особенный день</div>
+
+    <h1>
+      С днём рождения,<br>
+      моя любимая ЛЕНАРА!
+    </h1>
+
+    <p class="hero-description">
+      Сегодня мир стал чуточку прекраснее, ведь именно в этот
+      день родилась ты. Пусть твои шестнадцать будут наполнены
+      любовью, нежностью, улыбками и настоящими чудесами. 💕
+    </p>
+
+    <a class="btn" href="#wishes">
+      Моё поздравление ♡
+    </a>
+
+  </div>
+</header>
+
+<!-- ПОЖЕЛАНИЯ -->
+<section class="section" id="wishes">
+
+  <div class="section-heading reveal">
+    <h2>Мои пожелания тебе</h2>
+    <p>Каждое из них — от самого сердца 🌷</p>
+  </div>
+
+  <div class="wishes-grid">
+
+    <article class="wish-card reveal">
+      <div class="wish-icon">🌸</div>
+      <h3>Будь счастлива</h3>
+      <p>
+        Пусть каждое утро начинается с улыбки котик, каждый день
+        приносит радость, а каждый вечер оставляет тёплые
+        воспоминания.
+      </p>
+    </article>
+
+    <article class="wish-card reveal">
+      <div class="wish-icon">🦋</div>
+      <h3>Оставайся собой</h3>
+      <p>
+        Ты прекрасна как и в тот день как мы познакомились именно такая,
+         какая есть. Не теряй
+        свою индивидуальность, доброту, искренность
+        и внутренний свет.
+      </p>
+    </article>
+
+    <article class="wish-card reveal">
+      <div class="wish-icon">✨</div>
+      <h3>Пусть сбудутся мечты</h3>
+      <p>
+        Мечтай смело, верь в себя и никогда не бойся
+        идти к своим целям. Пусть жизнь удивляет
+        тебя только хорошим.
+      </p>
+    </article>
+
+    <article class="wish-card reveal">
+      <div class="wish-icon">🎀</div>
+      <h3>Больше улыбок</h3>
+      <p>
+        Желаю поводов смеяться до слёз, приятных сюрпризов,
+        уютных вечеров и незабываемых приключений.
+      </p>
+    </article>
+
+    <article class="wish-card reveal">
+      <div class="wish-icon">🌙</div>
+      <h3>Тепла и заботы</h3>
+      <p>
+        Пусть рядом будут люди, которые понимают тебя,
+        уважают твои чувства и поддерживают твои мечты.
+        И в особености я)
+      </p>
+    </article>
+
+    <article class="wish-card reveal">
+      <div class="wish-icon">💖</div>
+      <h3>Много любви</h3>
+      <p>
+        Пусть твоё сердце будет наполнено нежностью,
+        спокойствием, надеждой и уверенностью в том,
+        что впереди много прекрасного.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<!-- ПЕРВАЯ ГАЛЕРЕЯ: 4 ФОТО -->
+<section class="section" id="photos">
+
+  <div class="section-heading reveal">
+    <h2>Моя любимая красотка 🎀</h2>
+    <p>
+      Четыре фотографии самой прекрасной девушки на свете.
+      Хотя никакие фотографии не передадут всей твоей красоты 💗
+    </p>
+  </div>
+
+  <div class="photo-grid">
+
+    <article class="polaroid reveal" style="--tilt:-3deg">
+      <span class="photo-heart">♥</span>
+      <img src="photo-1.jpg" alt="Моя любимая" loading="lazy">
+      <div class="photo-caption">Моя красотка ♡</div>
+    </article>
+
+    <article class="polaroid reveal" style="--tilt:2deg">
+      <span class="photo-heart">♥</span>
+      <img src="photo-2.jpg" alt="Её улыбка" loading="lazy">
+      <div class="photo-caption">Твоя улыбка 💗</div>
+    </article>
+
+    <article class="polaroid reveal" style="--tilt:-2deg">
+      <span class="photo-heart">♥</span>
+      <img src="photo-3.jpg" alt="Самая милая" loading="lazy">
+      <div class="photo-caption">Моё счастье 🌸</div>
+    </article>
+
+    <article class="polaroid reveal" style="--tilt:3deg">
+      <span class="photo-heart">♥</span>
+      <img src="photo-4.jpg" alt="Любимый момент" loading="lazy">
+      <div class="photo-caption">Самая особенная ✨</div>
+    </article>
+
+     <article class="polaroid reveal" style="--tilt:3deg">
+      <span class="photo-heart">♥</span>
+      <img src="photo-5.jpg" alt="Любимый момент" loading="lazy">
+      <div class="photo-caption">Это наше соотношение💕 </div>
+    </article>
+
+  </div>
+
+  <p class="gallery-caption reveal">
+    Каждый снимок — маленькое напоминание о том,
+    какая же ты невероятная. ♡
+  </p>
+
+</section>
+
+<!-- ВТОРАЯ ГАЛЕРЕЯ: ФОТОКОЛЛАЖ -->
+<section class="section" id="collage">
+
+  <div class="section-heading reveal">
+    <h2>Моменты, которые хочется сохранить 💌</h2>
+    <p>
+      Маленький розовый альбом с фотографиями,
+      которые хочется пересматривать снова и снова.
+    </p>
+  </div>
+
+  <div class="collage-wrap reveal">
+
+    <div class="photo-collage">
+
+      <div class="collage-item">
+        <img src="photo-6.jpg" alt="Особенный момент" loading="lazy">
+      </div>
+
+      <div class="collage-item">
+        <img src="photo-7.jpg" alt="Нежное воспоминание" loading="lazy">
+      </div>
+
+      <div class="collage-item">
+        <img src="photo-8.jpg" alt="Любимый снимок" loading="lazy">
+      </div>
+
+      <div class="collage-item">
+        <img src="photo-9.jpg" alt="Счастливый момент" loading="lazy">
+      </div>
+
+       <div class="collage-item">
+        <img src="photo-10.jpg" alt="Счастливый момент" loading="lazy">
+      </div>
+
+    </div>
+
+  </div>
+
+  <p class="gallery-caption reveal">
+    Пусть впереди будет ещё миллион счастливых моментов,
+    которые захочется сохранить навсегда. 💕
+  </p>
+
+</section>
+
+<!-- ПИСЬМО -->
+<section class="section" id="letter">
+
+  <div class="section-heading reveal">
+    <h2>Письмо для тебя 💌</h2>
+    <p>Самые важные слова — от сердца к сердцу.</p>
+  </div>
+
+  <div class="letter-envelope reveal">
+
+    <div class="letter">
+
+      <h3>Моя родная, с твоим днём рождения! ♡</h3>
+
+      <p>
+        Сегодня тебе исполняется 16 лет, и я хочу пожелать
+        тебе всего самого прекрасного, что только может
+        подарить этот мир.
+      </p>
+
+      <p>
+        Ты особенная. В тебе есть что-то, что делает обычные
+        моменты незабываемыми. Твоя улыбка способна поднять
+        настроение, а твоё присутствие делает мир чуточку теплее.
+      </p>
+
+      <p>
+        Желаю тебе никогда не сомневаться в себе, не бояться
+        ошибок и не отказываться от своих мечтаний. Пусть у тебя
+        получается всё, к чему ты прикладываешь сердце.
+        Пусть рядом будут искренние люди, а впереди ждут события,
+        о которых ты будешь вспоминать с улыбкой.
+      </p>
+
+      <p>
+        Я хочу, чтобы ты чаще улыбалась, чувствовала себя любимой,
+        замечала свою красоту и гордилась тем, какой человек ты есть.
+        Пусть ни один плохой день не заставит тебя забыть,
+        сколько прекрасного в тебе самой.
+      </p>
+
+      <p>
+        Спасибо тебе за то, что ты есть в моей жизни.
+        Я очень хочу, чтобы этот день подарил тебе много радости,
+        нежности и приятных сюрпризов.
+      </p>
+
+      <p>
+        С шестнадцатилетием, моя капибарочка!
+        Пусть этот год станет одним из самых ярких в твоей жизни.
+        Мечтай, сияй, смейся и никогда не забывай,
+        насколько ты замечательная. 💗
+      </p>
+
+      <div class="signature">
+       ♡Обнимаю крепко, твой любимый Сникерс ♡
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ФИНАЛЬНЫЙ СЮРПРИЗ -->
+<section class="final">
+
+  <h2 class="reveal">И это ещё не всё… 💞</h2>
+
+  <p class="reveal">
+    Сегодня твой день, и я хочу, чтобы ты улыбалась
+    как можно чаще. Загадай желание и помни:
+    впереди тебя ждёт ещё столько прекрасного!
+  </p>
+
+  <button class="btn reveal" id="surprise">
+    Нажми на сюрприз 💝
+  </button>
+
+</section>
+
+<footer>
+        Сделано с любовью специально для тебя ♡
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Наверх">↑</button>
+
+<script>
+/* ПОЯВЛЕНИЕ БЛОКОВ ПРИ ПРОКРУТКЕ */
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.12
+});
+
+document.querySelectorAll('.reveal').forEach((element) => {
+  revealObserver.observe(element);
+});
+
+/* ПОЯВЛЕНИЕ КАРТОЧЕК ПОЖЕЛАНИЙ */
+
+const wishObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.animate(
+        [
+          { opacity: 0, transform: 'translateY(25px)' },
+          { opacity: 1, transform: 'translateY(0)' }
+        ],
+        {
+          duration: 650,
+          easing: 'cubic-bezier(.2,.8,.2,1)',
+          fill: 'both'
+        }
+      );
+      wishObserver.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.15
+});
+
+document.querySelectorAll('.wish-card').forEach((card) => {
+  card.style.opacity = '0';
+  wishObserver.observe(card);
+});
+
+/* СЕРДЕЧКИ ПРИ КЛИКЕ */
+
+function createHearts(x, y, amount = 12) {
+  const symbols = ['💗', '💕', '💖', '♡', '✨', '🌸'];
+
+  for (let i = 0; i < amount; i++) {
+    const heart = document.createElement('span');
+
+    heart.className = 'heart-particle';
+    heart.textContent =
+      symbols[Math.floor(Math.random() * symbols.length)];
+
+    heart.style.left = x + 'px';
+    heart.style.top = y + 'px';
+    heart.style.fontSize = (15 + Math.random() * 20) + 'px';
+    heart.style.setProperty(
+      '--drift',
+      ((Math.random() - 0.5) * 180) + 'px'
+    );
+    heart.style.animationDuration =
+      (1.2 + Math.random() * 1.1) + 's';
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 2500);
+  }
+}
+
+document.addEventListener('click', (event) => {
+  if (event.target.closest('a, button')) {
+    createHearts(event.clientX, event.clientY, 7);
+  }
+});
+
+/* КНОПКА СЮРПРИЗА */
+
+document.getElementById('surprise').addEventListener('click', () => {
+  createHearts(
+    window.innerWidth / 2,
+    window.innerHeight * 0.65,
+    65
+  );
+
+  setTimeout(() => {
+    alert(
+      '💗 С ДНЁМ РОЖДЕНИЯ, МОЯ ЛЮБИМАЯ! 💗\n\n' +
+      'Желаю тебе бесконечного счастья, ' +
+      'исполнения самых заветных желаний, ' +
+      'искренних улыбок и прекрасных моментов!\n\n' +
+      'Ты заслуживаешь всего самого лучшего! 🎀'
+    );
+  }, 250);
+});
+
+/* КНОПКА ВОЗВРАТА НАВЕРХ */
+
+const toTop = document.getElementById('toTop');
+
+window.addEventListener('scroll', () => {
+  toTop.classList.toggle('visible', window.scrollY > 500);
+}, { passive: true });
+
+toTop.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+/* НЕ ПОКАЗЫВАЕМ ПУСТЫЕ МЕСТА, ЕСЛИ ФОТО НЕ НАЙДЕНО */
+
+document.querySelectorAll('.polaroid img, .collage-item img')
+  .forEach((img) => {
+    img.addEventListener('error', () => {
+      img.style.display = 'none';
+
+      const parent = img.parentElement;
+      parent.style.background =
+        'linear-gradient(145deg, #ffe0ed, #ffc0da)';
+      parent.style.minHeight = '120px';
+
+      if (parent.classList.contains('polaroid')) {
+        parent.style.display = 'grid';
+        parent.style.alignContent = 'center';
+
+        const caption = parent.querySelector('.photo-caption');
+        if (caption) {
+          caption.textContent = 'Добавь своё фото ♡';
+        }
+      } else {
+        parent.style.display = 'grid';
+        parent.style.placeItems = 'center';
+        parent.style.color = '#df498e';
+
+        const heart = document.createElement('span');
+        heart.textContent = '♡';
+        heart.style.fontSize = '35px';
+        parent.appendChild(heart);
+      }
+    });
+  });
+</script>
+
+
+<audio id="bgMusic" autoplay loop preload="auto">
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const music = document.getElementById('bgMusic');
+
+// Пытаемся запустить музыку сразу при открытии сайта
+music.volume = 0.35;
+
+music.play().catch(() => {
+  // Если браузер заблокировал автозапуск,
+  // пробуем начать воспроизведение после первого взаимодействия
+  const startMusic = () => {
+    music.play().then(() => {
+      document.removeEventListener('click', startMusic);
+      document.removeEventListener('touchstart', startMusic);
+      document.removeEventListener('keydown', startMusic);
+    }).catch(() => {});
+  };
+
+  document.addEventListener('click', startMusic);
+  document.addEventListener('touchstart', startMusic);
+  document.addEventListener('keydown', startMusic);
+});
+</script>
+</body>
+</html>
